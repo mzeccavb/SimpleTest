@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Alert");
-                builder.setMessage("You pressed a button 1!");
+                builder.setMessage(getString(R.string.alert1));
                 builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Alert");
-                builder.setMessage("You pressed a button 2!");
+                builder.setMessage(getString(R.string.alert2));
                 builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Alert");
-                builder.setMessage("You pressed a button 3!");
+                builder.setMessage(getString(R.string.alert3));
                 builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

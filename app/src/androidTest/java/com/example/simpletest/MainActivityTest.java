@@ -54,7 +54,9 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         Espresso.onView(ViewMatchers.withId(R.id.myButton1))
                 .perform(ViewActions.click());
 
-        Espresso.onView(ViewMatchers.withText("You pressed a button 1!"))
+        Thread.sleep(250l); // necessary as execution is faster than screen renderer
+
+        Espresso.onView(ViewMatchers.withText(getActivity().getString(R.string.alert1)))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
 
         Espresso.onView(ViewMatchers.withId(android.R.id.button1))
@@ -66,7 +68,9 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         Espresso.onView(ViewMatchers.withId(R.id.myButton2))
                 .perform(ViewActions.click());
 
-        Espresso.onView(ViewMatchers.withText("You pressed a button 2!"))
+        Thread.sleep(250l); // necessary as execution is faster than screen renderer
+
+        Espresso.onView(ViewMatchers.withText(getActivity().getString(R.string.alert2)))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
 
         Espresso.onView(ViewMatchers.withId(android.R.id.button1))
@@ -78,7 +82,9 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         Espresso.onView(ViewMatchers.withId(R.id.myButton3))
                 .perform(ViewActions.click());
 
-        Espresso.onView(ViewMatchers.withText("You pressed a button 3!"))
+        Thread.sleep(250l); // necessary as execution is faster than screen renderer
+
+        Espresso.onView(ViewMatchers.withText(getActivity().getString(R.string.alert3)))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
 
         Espresso.onView(ViewMatchers.withId(android.R.id.button1))
